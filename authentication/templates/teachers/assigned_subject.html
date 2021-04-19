@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+    <div class="card-body text-light bg-dark">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page"> {{ user.username }} Students</li>
+        </ol>
+      </nav>
+      <h2 class="mb-3">{{ user.username }} Students</h2>
+      <a href="{% url 'teachers:add_subject' %}" class="btn btn-primary mb-3" role="button">Add Subject</a>
+      <div class="card">
+        <table class="table mb-0 text-success bg-dark ">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Semester</th>
+              <th>Student</th>
+              <!-- <th></th>
+              <th></th> -->
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
